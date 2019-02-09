@@ -1,0 +1,37 @@
+{
+  "name": "deodata_serenity_api",
+  "version": "1.0.0",
+  "description": "* Ejecutar los siguientes comandos desde la raiz del proyecto",
+  "main": "protractor.conf.js",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "chai": "^4.2.0",
+    "chai-as-promised": "^7.1.1"
+  },
+  "devDependencies": {
+    "@types/node": "^10.12.24",
+    "cucumber": "^1.3.2",
+    "npm-failsafe": "^0.4.1",
+    "protractor": "^5.4.2",
+    "serenity-cli": "^0.11.1",
+    "serenity-js": "^1.10.13",
+    "ts-node": "^7.0.1",
+    "typescript": "^3.3.3"
+  },
+  "scripts": {
+    "prepublish": "npm run setup",
+    "preprotractor": "npm run webdriver:update -- --standalone",
+    "protractor": "node ./node_modules/protractor/bin/protractor ./protractor.conf.js --silent",
+    "setup": "npm run typings -- install",
+    "test": "npm run protractor",
+    "typings": "typings",
+    "webdriver-manager": "node ./node_modules/protractor/bin/webdriver-manager",
+    "webdriver:update": "npm run webdriver-manager update",
+    "e2e-scenario": "protractor ./protractor.conf.js --cucumberOpts.name",
+    "report": "serenity run",
+    "serenity-update": "serenity update",
+    "runSpecificScenario": "node ./node_modules/protractor/bin/protractor ./protractor.conf.js --cucumberOpts.name Succesful_login"
+  },
+  "author": "",
+  "license": "ISC"
+}
