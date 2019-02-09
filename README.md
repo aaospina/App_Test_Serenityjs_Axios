@@ -14,7 +14,7 @@
 * npm install --save-dev serenity-cli  --> Generador de reportes html a partir de archivos json
 * npm install --save-dev ts-node
 
-# Aditional configurations
+### Aditional configurations
 * En el archivo tsconfig generado comentar la siguiente linea: "strict": true,
 * npm install axios
 * npm install chai
